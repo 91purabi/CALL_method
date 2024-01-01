@@ -22,19 +22,33 @@
 
 //Create a function that uses call to find the mminimum number in an array of numbers.
 
-function findMin() {
-  let min = Infinity;
+// function findMin() {
+//   let min = Infinity;
 
-  for(let i = 0; i < this.length;i++) {
-    if(this[i] < min) {
-      min = this[i];
-    }
+//   for(let i = 0; i < this.length;i++) {
+//     if(this[i] < min) {
+//       min = this[i];
+//     }
 
-  }
+//   }
 
-  return min;
-}
+//   return min;
+// }
   
-const num = [7, 12, 16, 22, 9];
-const minNum = findMin.call(num);
-console.log("The min number is:", minNum);
+// const num = [7, 12, 16, 22, 9];
+// const minNum = findMin.call(num);
+// console.log("The min number is:", minNum);
+
+
+
+//Create a generic multiply function that can be used with call to multiply any number by a specific factor. solution with example
+
+function multiply(factor2) {
+  return this * factor2;
+}
+
+// Example usage
+const numberToMultiply = 9;
+const factor1 = 9;
+const result = multiply.call(numberToMultiply, factor1);
+console.log(`${numberToMultiply} multiplied by ${factor1} is ${result}`);
