@@ -51,22 +51,47 @@
 // const double = multiplier(2);
 // console.log(double(5));
 
-function exampleVar(){
-    if(true){
-        var x = 10;
+// function exampleVar(){
+//     if(true){
+//         var x = 10;
+//     }
+
+//     console.log(x);
+// }
+
+// function exampleLetConst(){
+//     if(true){
+//         let y = 20;
+//         const z = 30;
+//     }
+//     console.log(y); //y is not defined
+// }
+
+// exampleVar();  // 10
+// exampleLetConst();
+
+// function outerFunction(x){
+//     function innerFunction(y){
+//         return x + y;
+//     }
+
+//     return innerFunction;
+// }
+
+// const closureExample = outerFunction(10);
+// console.log(closureExample(5)); 
+// console.log(closureExample(8));
+
+
+function outerMultiply(a){
+    function innerMultiply(b){
+        return a / b;
     }
 
-    console.log(x);
+    return innerMultiply;
 }
 
-function exampleLetConst(){
-    if(true){
-        let y = 20;
-        const z = 30;
-    }
-    console.log(y); //y is not defined
-}
-
-exampleVar();  // 10
-exampleLetConst();
+const closureMultiply = outerMultiply(5);
+console.log(closureMultiply(5));
+console.log(closureMultiply(2));
 
